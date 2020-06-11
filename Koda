@@ -1,0 +1,81 @@
+const int Gumb1=13;
+const int Gumb2=12;
+const int Gumb3=11;
+const int Gumb4=10;
+const int Gumb5=9;
+const int Gumb6=8;
+const int Gumb7=7;
+const int Gumb8=6;
+const int GumbToggle=5;
+String geslo="5431";
+String vnos="";
+void setup() {
+  pinMode(Gumb1,INPUT_PULLUP);
+  pinMode(Gumb2,INPUT_PULLUP);
+  pinMode(Gumb3,INPUT_PULLUP);
+  pinMode(Gumb4,INPUT_PULLUP);
+  pinMode(Gumb5,INPUT_PULLUP);
+  pinMode(Gumb6,INPUT_PULLUP);
+  pinMode(Gumb7,INPUT_PULLUP);
+  pinMode(Gumb8,INPUT_PULLUP);
+  pinMode(GumbToggle,INPUT_PULLUP);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if(digitalRead(GumbToggle)==LOW){
+    if(vnos.length()==4){
+      Serial.println(vnos + ", " + geslo);
+      if(vnos.equals(geslo)){
+        Serial.println("Ključavnica je odklenjena.");
+        vnos="";
+        }
+        else{
+          Serial.println("Nepravilno, poskusi še enkrat.");
+          vnos="";
+        }
+    }
+    else{
+      if(digitalRead(Gumb1)==LOW){
+        Serial.println("1");
+        vnos += "1";
+        delay(500);
+      }
+      else if(digitalRead(Gumb2)==LOW){
+        Serial.println("2");
+        vnos += "2";
+        delay(500);
+      }
+      else if(digitalRead(Gumb3)==LOW){
+        Serial.println("3");
+        vnos += "3";
+        delay(500);
+      }
+      else if(digitalRead(Gumb4)==LOW){
+        Serial.println("4");
+        vnos += "4";
+        delay(500);
+      }
+      else if(digitalRead(Gumb5)==LOW){
+        Serial.println("5");
+        vnos += "5";
+        delay(500);
+      }
+      else if(digitalRead(Gumb6)==LOW){
+        Serial.println("6");
+        vnos += "6";
+        delay(500);
+      }
+      else if(digitalRead(Gumb7)==LOW){
+        Serial.println("7");
+        vnos += "7";
+        delay(500);
+      }
+      else if(digitalRead(Gumb8)==LOW){
+        Serial.println("8");
+        vnos += "8";
+        delay(500);
+      }
+    }
+  }
+}
