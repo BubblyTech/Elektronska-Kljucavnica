@@ -14,4 +14,7 @@ KOMPONENTI
 -Tipke 8x
 
 MNENJE
+
 Naloga nama ni predstavljala večjih težav razen program Arduino nama je nagajal in ni deloval na prenosnem računalniku. 1 gumba nisva imela zato jih imama samo 8. Naloga je preprosta in deluje brez težav.
+
+Video: https://youtu.be/uRmhXCPVzDE
